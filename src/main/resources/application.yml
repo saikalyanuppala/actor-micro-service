@@ -1,0 +1,31 @@
+spring:
+   application:
+      name: actor-micro-service
+   
+   datasource:
+     driver-class-name: org.h2.Driver
+     url: jdbc:h2:mem:actors
+     username: sa
+     password:
+     
+   jpa:
+    database: h2
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+       ddl-auto: none
+       
+   h2:
+    consoel:
+       enabled: true
+       path: /h2-actor-console
+       settings:
+          web-allow-others: true
+          trace: false
+server:
+   port: 7777
+
+movie:
+   service:
+      url: http://localhost:7171/movies/actor/
