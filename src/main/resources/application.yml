@@ -28,4 +28,4 @@ server:
 
 movie:
    service:
-      url: http://localhost:7171/movies/actor/
+      apihost: http://localhost:7171/
